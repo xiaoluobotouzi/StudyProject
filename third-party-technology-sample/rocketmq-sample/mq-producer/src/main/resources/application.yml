@@ -1,0 +1,24 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: mq-producer
+
+rocketmq:
+  name-server: 10.10.16.41:9876
+  producer:
+    # 生产组名，以应用定义
+    topic: TOPIC_0309
+    group: PG_0309
+    tag: TAG_0309
+    # 开启内部消息重试
+    retry-next-server: true
+    # 消息发送超时时间
+    send-message-timeout: 3000
+    # 权限认证
+    access-key: PG_RDPC_PUB
+    secret-key: 123123123
+
+
+

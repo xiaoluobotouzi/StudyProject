@@ -1,0 +1,17 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: mq-consumer
+
+rocketmq:
+  name-server: 10.10.16.41:9876
+  consumer:
+    topic: TOPIC_0309
+    group: CG_0309
+    tag: TAG_0309
+    access-key: CG_RDATA_SUB
+    secret-key: 123123123
+
+
