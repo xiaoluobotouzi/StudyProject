@@ -1,8 +1,8 @@
-package com.uzi.javaString;
+package com.uzi.javaCommonClass;
 
 /**
  * @ClassName: StringSample
- * @Description: String 示例
+ * @Description: String类 示例
  * @Author: uziJamesi
  * @Date 2020/3/10 21:14
  * ...
@@ -10,6 +10,12 @@ package com.uzi.javaString;
 public class StringSample {
 
     public static void main(String[] args) {
+
+        StringBufferUzi();
+
+    }
+
+    public static void StringBufferUzi(){
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("Hello，");
         stringBuffer.append("World");
