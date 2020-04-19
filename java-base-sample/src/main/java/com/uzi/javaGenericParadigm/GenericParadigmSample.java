@@ -40,14 +40,6 @@ public class GenericParadigmSample {
 //        Collection<?> c = new ArrayList<String>();
 //        c.add(new Object()); // Compile time error
 
-        // 测试第一种情况
-        ObjectTool<Integer> objectTool = new IntegerToolImpl();
-        objectTool.print("Hello World");
-
-        // 第二种情况测试
-        ObjectTool<Integer> ii = new IntegerToolImpl<Integer>();
-        ii.print(1000);
-
     }
 
     /**
