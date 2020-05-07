@@ -14,8 +14,33 @@ public class RegexpSample {
 
     public static void main(String[] args) {
 //        regexpUzi();
-        regexpUzi2();
+//        regexpUzi2();
+
+        String str = "Human pharmacology (Phase I): noTherapeutic exploratory (Phase II): noTherapeutic confirmatory - (Phase III): YesTherapeutic use (Phase IV): Yes";
+        String[] split = str.split(": Yes");
+        for (String s : split) {
+            String substring = s.substring(s.lastIndexOf("("), s.lastIndexOf(")")+1);
+            System.out.println(substring);
+        }
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public static void regexpUzi2() {

@@ -18,17 +18,17 @@ public class ConsumerSuperSample {
 
     public static void main(String[] args) {
         List<? super BMW> bmws = new ArrayList<>();
-        bmws.add(new Car());  // compile error
+//        bmws.add(new Car());  // compile error
         bmws.add(new BMW());  // compile success
         bmws.add(new BMWX5()); // compile success
         bmws.add(new BMWZ4()); // compile success
 
         bmws = new ArrayList<BMW>();  // compile success
-        bmws = new ArrayList<BMWX5>();  // compile error
+//        bmws = new ArrayList<BMWX5>();  // compile error
         bmws = new ArrayList<Car>(); // compile success
-        bmws = new ArrayList<? extends BMW>(); // compile error（通配符类型无法实例化）
+//        bmws = new ArrayList<? extends BMW>(); // compile error（通配符类型无法实例化）
 
-        BMW bmw = bmws.get(0); // compile error
+//        BMW bmw = bmws.get(0); // compile error
     }
 
 }
