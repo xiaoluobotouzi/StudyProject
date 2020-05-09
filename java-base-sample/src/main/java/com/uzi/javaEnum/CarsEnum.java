@@ -10,6 +10,11 @@ public enum CarsEnum {
 
     BenZ,
     BMW,
+    BMWX1,
+    BMWX2,
+    BMWX3,
+    BMWX4,
+    BMWX5,
     Audi;
 
 }
