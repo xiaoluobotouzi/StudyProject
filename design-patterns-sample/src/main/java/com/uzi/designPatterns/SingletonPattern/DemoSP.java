@@ -7,4 +7,12 @@ package com.uzi.designPatterns.SingletonPattern;
  * ...
  */
 public class DemoSP {
+
+    public static void main(String[] args) {
+
+        HungrySingleton singleton = HungrySingleton.getSingleton();
+
+    }
+
+
 }

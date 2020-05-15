@@ -1,4 +1,4 @@
-package com.uzi.ioSample.mk;
+package com.uzi.javaIo.mk;
 
 import org.assertj.core.util.Lists;
 

@@ -1,4 +1,4 @@
-package com.uzi.ioSample.bio;
+package com.uzi.javaIo.bio;
 
 import java.io.IOException;
 import java.net.Socket;

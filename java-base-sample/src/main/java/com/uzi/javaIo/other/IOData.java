@@ -1,4 +1,4 @@
-package com.uzi.ioSample.other;
+package com.uzi.javaIo.other;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

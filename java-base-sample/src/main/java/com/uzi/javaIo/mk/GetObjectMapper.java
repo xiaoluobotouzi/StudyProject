@@ -1,4 +1,4 @@
-package com.uzi.ioSample.mk;
+package com.uzi.javaIo.mk;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

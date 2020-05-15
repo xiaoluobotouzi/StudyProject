@@ -1,4 +1,4 @@
-package com.uzi.ioSample.aio;
+package com.uzi.javaIo.aio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

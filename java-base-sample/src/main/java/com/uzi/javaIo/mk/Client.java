@@ -1,4 +1,4 @@
-package com.uzi.ioSample.mk;
+package com.uzi.javaIo.mk;
 
 import java.io.IOException;
 import java.net.Socket;

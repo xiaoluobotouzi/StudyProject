@@ -1,6 +1,5 @@
-package com.uzi.ioSample.mk;
+package com.uzi.javaIo.mk;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
