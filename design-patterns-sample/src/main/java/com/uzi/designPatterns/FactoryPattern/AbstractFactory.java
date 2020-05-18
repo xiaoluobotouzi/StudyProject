@@ -46,7 +46,7 @@ class BWMHub implements CarHub{
     }
 }
 
-// BMW 产品族，创建自己的汽车轮毂
+// BMW 产品族，创建自己的汽车发动机
 class BWMEngine implements CarEngine{
 
     @Override
@@ -78,7 +78,7 @@ class BenzHub implements CarHub{
     }
 }
 
-// Benz 产品族，创建自己的汽车轮毂
+// Benz 产品族，创建自己的汽车发动机
 class BenzEngine implements CarEngine{
 
     @Override
