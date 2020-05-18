@@ -1,7 +1,7 @@
 package com.uzi.designPatterns.SingletonPattern;
 
 /**
- * @Description: TODO
+ * @Description: 单例模式 - 枚举实现
  * @Author: LIU.KL
  * @Date: 2019/10/23
  * ...
