@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.PrototypePattern;
+package com.uzi.designPatterns.prototypePattern;
 
 import java.io.*;
 

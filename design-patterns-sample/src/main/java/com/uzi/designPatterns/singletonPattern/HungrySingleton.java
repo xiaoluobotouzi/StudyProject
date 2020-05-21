@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.SingletonPattern;
+package com.uzi.designPatterns.singletonPattern;
 
 /**
  * @Description: 单例设计模式 - 饿汉式

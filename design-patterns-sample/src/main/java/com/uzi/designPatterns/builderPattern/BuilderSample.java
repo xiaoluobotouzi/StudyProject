@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.BuilderPattern;
+package com.uzi.designPatterns.builderPattern;
 
 /**
  * @Description: 建造者模式 -demo

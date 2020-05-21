@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.FlyweightPattern;
+package com.uzi.designPatterns.flyweightPattern;
 
 import java.util.Map;
 import java.util.Random;
@@ -25,8 +25,18 @@ public class FlyweightPattern {
 //        System.out.println("i3 == i4: " + (i3 == i4)); // false
 
         // 享元模式
-        ITicket iTicket = TicketFactory.queryTicket("北京", "天津");
-        iTicket.showInfo("二等座");
+        TicketFactory.queryTicket("北京", "天津", "二等座");
+        TicketFactory.queryTicket("北京", "天津", "二等座");
+        TicketFactory.queryTicket("北京", "天津", "二等座");
+        TicketFactory.queryTicket("北京", "天津", "一等座");
+        TicketFactory.queryTicket("北京", "天津", "一等座");
+        TicketFactory.queryTicket("北京", "天津", "一等座");
+        TicketFactory.queryTicket("北京", "天津", "特等座");
+        TicketFactory.queryTicket("北京", "天津", "特等座");
+        TicketFactory.queryTicket("北京", "天津", "特等座");
+        TicketFactory.queryTicket("北京", "天津", "二等座");
+        TicketFactory.queryTicket("北京", "天津", "一等座");
+        TicketFactory.queryTicket("北京", "天津", "特等座");
 
     }
 }
@@ -62,15 +72,19 @@ class TicketFactory{
     // 为了线程安全 使用 ConcurrentHashMap
     private static Map<String, ITicket> ticketPool = new ConcurrentHashMap<>();
 
-    public static ITicket queryTicket(String from, String to){
-        String key = from + "TO" + to;
+    public static ITicket queryTicket(String from, String to, String seat){
+        ITicket ticket = null;
+        String key = from + "->" + to + " " + seat;
         if(ticketPool.containsKey(key)){
             System.out.print("从缓存中查询：" + key + "，查询结果： ");
-            return ticketPool.get(key);
+            ticket = ticketPool.get(key);
+            ticket.showInfo(seat);
+            return ticket;
         }
         System.out.print("首次查询：" + key + "，查询结果： ");
-        ITicket trainTicket = new TrainTicket(from, to);
-        ticketPool.put(key, trainTicket);
-        return trainTicket;
+        ticket = new TrainTicket(from, to);
+        ticketPool.put(key, ticket);
+        ticket.showInfo(seat);
+        return ticket;
     }
 }

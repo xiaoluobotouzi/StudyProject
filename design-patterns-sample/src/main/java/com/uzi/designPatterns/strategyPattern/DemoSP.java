@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.StrategyPattern;
+package com.uzi.designPatterns.strategyPattern;
 
 /**
  * @Description: 策略模式 -demo

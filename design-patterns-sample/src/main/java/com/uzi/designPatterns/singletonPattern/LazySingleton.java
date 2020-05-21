@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.SingletonPattern;
+package com.uzi.designPatterns.singletonPattern;
 
 /**
  * @Description: 单例设计模式 - 懒汉式（不安全的，安全的，双重校验的）

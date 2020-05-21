@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.SingletonPattern;
+package com.uzi.designPatterns.singletonPattern;
 
 /**
  * @Description: TODO

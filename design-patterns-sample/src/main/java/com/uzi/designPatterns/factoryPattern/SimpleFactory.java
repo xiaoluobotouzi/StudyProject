@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.FactoryPattern;
+package com.uzi.designPatterns.factoryPattern;
 
 /**
  * @Description: 简单工厂 - demo
