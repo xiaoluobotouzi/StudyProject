@@ -9,4 +9,3 @@ package com.uzi.designPatterns.adapterPattern;
 public class AdapterPattern {
 }
 
-
