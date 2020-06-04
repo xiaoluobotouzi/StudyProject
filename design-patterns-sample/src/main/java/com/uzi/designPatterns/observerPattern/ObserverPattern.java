@@ -10,8 +10,6 @@ import java.util.ArrayList;
  */
 public class ObserverPattern {
 
-
-
 }
 
 // 目标、主题类

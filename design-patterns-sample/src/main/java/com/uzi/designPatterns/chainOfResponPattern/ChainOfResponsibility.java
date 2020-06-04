@@ -1,4 +1,4 @@
-package com.uzi.designPatterns.chainOfResponsibility2;
+package com.uzi.designPatterns.chainOfResponPattern;
 
 /**
  * @Description: 责任链模式 -demo
