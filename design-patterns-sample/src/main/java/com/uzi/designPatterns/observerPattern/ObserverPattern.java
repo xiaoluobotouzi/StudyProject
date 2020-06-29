@@ -9,7 +9,20 @@ import java.util.ArrayList;
  * ...
  */
 public class ObserverPattern {
+    public static void main(String[] args) {
+        // 定义主题目标
+        Subject subject = new ConcreteSubject();
 
+        // 定义观察者
+        Observer o1 = new ConcreteObserver1();
+        Observer o2 = new ConcreteObserver1();
+
+        // 注册观察者
+        subject.addObserver(o1);
+        subject.addObserver(o2);
+
+        subject.notifys();
+    }
 }
 
 // 目标、主题类
@@ -50,13 +63,21 @@ interface Observer{
     void update();
 }
 
-// 具体观察者
-class ConcreteObserver implements Observer{
+// 具体观察者1
+class ConcreteObserver1 implements Observer{
 
     @Override
     public void update() {
-        System.out.println("做出具体响应");
+        System.out.println("ConcreteObserver1 做出具体响应");
     }
 }
 
+// 具体观察者2
+class ConcreteObserver2 implements Observer{
+
+    @Override
+    public void update() {
+        System.out.println("ConcreteObserver2 做出具体响应");
+    }
+}
 

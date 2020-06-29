@@ -14,6 +14,7 @@
         <module>java-base-sample</module>
         <module>springBoot-sample</module>
         <module>third-party-technology-sample</module>
+        <module>rocketMQ-sample</module>
     </modules>
 
     <!-- maven配置 -->

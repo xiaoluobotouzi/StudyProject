@@ -1,5 +1,5 @@
 server:
-  port: 8200
+  port: 8202
 
 spring:
   application:
@@ -8,10 +8,13 @@ spring:
 rocketmq:
   name-server: 10.10.16.41:9876
   consumer:
-    topic: TOPIC_0309
-    group: CG_0309
-    tag: TAG_0309
+    topic: TOPICX
+    tag: TAGX
+    group: CGX
+    group2: CGX2
+    group3: CGX3
     access-key: CG_RDATA_SUB
     secret-key: 123123123
+
 
 

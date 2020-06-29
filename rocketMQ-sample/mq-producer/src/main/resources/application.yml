@@ -9,9 +9,9 @@ rocketmq:
   name-server: 10.10.16.41:9876
   producer:
     # 生产组名，以应用定义
-    topic: TOPIC_0309
-    group: PG_0309
-    tag: TAG_0309
+    group: PGX
+    topic: TOPICX
+    tag: TAGX
     # 开启内部消息重试
     retry-next-server: true
     # 消息发送超时时间
