@@ -26,23 +26,6 @@ public class RegexpSample {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static void regexpUzi2() {
         String str = "中";
         String pattern = "[\u4e00-\u9fa5]";
