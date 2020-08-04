@@ -1,6 +1,8 @@
 package com.uzi.jvm;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import sun.misc.Launcher;
+
+import java.net.URL;
 
 /**
  * @ClassName: JvmClassLoaderSample
@@ -24,7 +26,19 @@ public class JvmClassLoaderSample {
 
         System.out.println();
 
+        System.out.println("bootstrapLoader加载的类文件：");
+        URL[] urLs = Launcher.getBootstrapClassPath().getURLs();
+        for (URL urL : urLs) {
+            System.out.println(urL);
+        }
 
+        System.out.println();
+
+        System.out.println("extClassloader加载的类文件：");
+        System.out.println(System.getProperty("java.ext.dirs"));
+
+        System.out.println();
+        System.out.println("appClassLoader加载的类文件：");
+        System.out.println(System.getProperty("java.class.path"));
     }
-
 }
