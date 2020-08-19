@@ -14,6 +14,7 @@ import java.net.URL;
 public class JvmClassLoaderSample {
 
     public static void main(String[] args) {
+
         System.out.println(String.class.getClassLoader());
         System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
         System.out.println(JvmClassLoaderSample.class.getClassLoader());
@@ -23,6 +24,11 @@ public class JvmClassLoaderSample {
         System.out.println(ClassLoader.getSystemClassLoader());
         System.out.println(ClassLoader.getSystemClassLoader().getParent());
         System.out.println(ClassLoader.getSystemClassLoader().getParent().getParent());
+
+        System.out.println();
+
+        Launcher launcher = new Launcher();
+        System.out.println(launcher.getClassLoader());
 
         System.out.println();
 
@@ -40,5 +46,7 @@ public class JvmClassLoaderSample {
         System.out.println();
         System.out.println("appClassLoader加载的类文件：");
         System.out.println(System.getProperty("java.class.path"));
+
+
     }
 }
