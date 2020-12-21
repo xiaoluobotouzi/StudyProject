@@ -10,7 +10,7 @@ rocketmq:
   consumer:
     topic: TOPICX
     tag: TAGX
-    group: CGX
+    group: CGX8
     group2: CGX2
     group3: CGX3
     access-key: CG_RDATA_SUB

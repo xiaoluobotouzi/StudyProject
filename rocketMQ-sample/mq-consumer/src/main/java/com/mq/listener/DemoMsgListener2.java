@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  * @Author: LIU.KL
  * ...
  */
-@Service
-@RocketMQMessageListener(consumerGroup = "${rocketmq.consumer.group2}", topic = "${rocketmq.consumer.topic}", consumeThreadMax = 32)
+//@Service
+//@RocketMQMessageListener(consumerGroup = "${rocketmq.consumer.group2}", topic = "${rocketmq.consumer.topic}", consumeThreadMax = 32)
 public class DemoMsgListener2 implements RocketMQListener<MessageExt> {
 
     private org.slf4j.Logger logger = LoggerFactory.getLogger(getClass());
