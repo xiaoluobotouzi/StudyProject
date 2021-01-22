@@ -3,13 +3,13 @@ package com.uzi.jvm;
 /**
  * @ClassName: JvmSample
  * @Description: TODO
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/7/8 22:18
  * ...
  */
 public class JvmSample {
 
-    static{
+    static {
         System.out.println(">>>加载JvmSample");
     }
 
@@ -20,20 +20,22 @@ public class JvmSample {
     }
 }
 
-class A{
+class A {
     static {
         System.out.println(">>>加载 A");
     }
-    public A(){
+
+    public A() {
         System.out.println(">>>初始化 A");
     }
 }
 
-class B{
+class B {
     static {
         System.out.println(">>>加载 B");
     }
-    public B(){
+
+    public B() {
         System.out.println(">>>初始化 B");
     }
 }

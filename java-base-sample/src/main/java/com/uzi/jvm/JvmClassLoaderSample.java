@@ -2,14 +2,13 @@ package com.uzi.jvm;
 
 import sun.misc.Launcher;
 
-import java.io.FileInputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
 
 /**
  * @ClassName: JvmClassLoaderSample
- * @Description: TODO
- * @Author: uziJamesi
+ * @Description: 类加载器
+ * @Author: uziJames
  * @Date 2020/7/29 22:50
  * ...
  */
@@ -17,19 +16,26 @@ public class JvmClassLoaderSample {
 
     public static void main(String[] args) throws Exception {
 
+        // 类加载器职责
 //        classLoader();
 
+        // 自定义类加载器，不能重写 loadClass 还得去委托加载
 //        customClassLoader();
 
-        customClassLoaderString();
+        // 打破双亲委派机制，重写 loadClass 去加载 自己写的 java.lang.String
+//        customClassLoaderString();
+
+
+
     }
 
     /**
      * 自定义类加载器
+     *
      * @throws Exception
      */
     private static void customClassLoader() throws Exception {
-        MyClassLoader myClassLoader = new MyClassLoader("D:/studyZiLiao/01_JVM");
+        MyClassLoader myClassLoader = new MyClassLoader("D:/StudyIT/Jvm");
         Class clazz = myClassLoader.loadClass("Test");
         Object object = clazz.newInstance();
         Method method = clazz.getDeclaredMethod("test", null);
@@ -39,10 +45,11 @@ public class JvmClassLoaderSample {
 
     /**
      * 自定义类加载器，打破双亲委派机制，加载自己写的 java.lang.String
+     *
      * @throws Exception
      */
     private static void customClassLoaderString() throws Exception {
-        MyClassLoader myClassLoader = new MyClassLoader("D:/studyZiLiao/01_JVM");
+        MyClassLoader myClassLoader = new MyClassLoader("D:/StudyIT/Jvm");
         Class clazz = myClassLoader.loadClass("java.lang.String");
         Object object = clazz.newInstance();
         Method method = clazz.getDeclaredMethod("test", null);
@@ -51,87 +58,9 @@ public class JvmClassLoaderSample {
     }
 
     /**
-     * My自定义类加载器
-     */
-    static class MyClassLoader extends ClassLoader {
-
-        private String classPath;
-
-        public MyClassLoader(String classPath) {
-            this.classPath = classPath;
-        }
-
-        private byte[] loadByte(String fileName) throws Exception {
-            String newFileName = fileName.replace(".", "/");
-            FileInputStream fis = new FileInputStream(classPath + "/" + newFileName + ".class");
-            int length = fis.available();
-            byte[] bytes = new byte[length];
-            fis.read(bytes);
-            fis.close();
-            return bytes;
-        }
-
-        protected Class<?> findClass(String name) throws ClassNotFoundException {
-            try {
-                byte[] data = loadByte(name);
-                // defineClass 将字节数组转换为类的实例
-                return defineClass(name, data, 0, data.length);
-            } catch (Exception e) {
-                e.printStackTrace();
-                throw new ClassNotFoundException();
-            }
-        }
-
-        /**
-         * 重写 loadClass 打破双亲委派机制
-         * @param name
-         * @param resolve
-         * @return
-         * @throws ClassNotFoundException
-         */
-        protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-            synchronized (getClassLoadingLock(name)) {
-                // First, check if the class has already been loaded
-                Class<?> c = findLoadedClass(name);
-                if (c == null) {
-                    long t0 = System.nanoTime();
-
-                    // 就这个 try catch 里的内容，去委托父类加载类的，那就不委托父类，自己尝试去加载
-//                    try {
-//                        if (parent != null) {
-//                            c = parent.loadClass(name, false);
-//                        } else {
-//                            c = findBootstrapClassOrNull(name);
-//                        }
-//                    } catch (ClassNotFoundException e) {
-//                        // ClassNotFoundException thrown if class not found
-//                        // from the non-null parent class loader
-//                    }
-
-                    if (c == null) {
-                        // If still not found, then invoke findClass in order
-                        // to find the class.
-                        long t1 = System.nanoTime();
-                        c = findClass(name);
-
-                        // this is the defining class loader; record the stats
-                        sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
-                        sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
-                        sun.misc.PerfCounter.getFindClasses().increment();
-                    }
-                }
-                if (resolve) {
-                    resolveClass(c);
-                }
-                return c;
-            }
-        }
-    }
-
-    /**
      * 类加载器职责
      */
-    private static void classLoader(){
+    private static void classLoader() {
         System.out.println(String.class.getClassLoader());
         System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
         System.out.println(JvmClassLoaderSample.class.getClassLoader());
@@ -164,4 +93,5 @@ public class JvmClassLoaderSample {
         System.out.println("appClassLoader加载的类文件：");
         System.out.println(System.getProperty("java.class.path"));
     }
+
 }

@@ -15,8 +15,19 @@ public class IOStreamSample {
 
 //        byteArrayIOStreamTest();
 
-        fileIOStreamTest();
+//        fileIOStreamTest();
 
+
+        Byte[] buf = new Byte[1024];
+        buf[0] = '0';
+        buf[1] = '1';
+        buf[2] = '2';
+
+//        int oldCapacity = buf.length;
+//        int newCapacity = oldCapacity << 1;
+//        System.out.println(newCapacity);
+
+//        System.out.println(buf[1] & 0xff);
 
 
     }
@@ -25,6 +36,15 @@ public class IOStreamSample {
 
         InputStream is;
         OutputStream os;
+
+    }
+
+    /**
+     * 缓冲输入输出流示例
+     */
+    private static void bufferedInputStreamTest() {
+//        BufferedInputStream bis = new BufferedInputStream();
+//        BufferedOutputStream bos = new BufferedOutputStream();
 
     }
 
@@ -39,12 +59,12 @@ public class IOStreamSample {
             fos = new FileOutputStream("/b.txt");
 
             // 创建一个缓冲字节数组，可减少IO操作，提高读写效率，一般用于大文件操作
-            byte[] byt = new byte[1024];
+//            byte[] byt = new byte[1024];
 
             // 读取缓冲字节数组长度的字节
 //            int read = fis.read(byt);
             int read = fis.read();
-            while(read != -1){
+            while (read != -1) {
 //                fos.write(byt, 0, read);
                 fos.write(read);
                 read = fis.read();
@@ -55,10 +75,10 @@ public class IOStreamSample {
         } catch (IOException e) {
             System.out.println("系统异常");
         } finally {
-            if(null != fos){
+            if (null != fos) {
                 fos.close();
             }
-            if(null != fis){
+            if (null != fis) {
                 fis.close();
             }
         }
@@ -88,12 +108,14 @@ public class IOStreamSample {
 
             System.out.println(bos.toString());
         } finally {
-            if(null != bos){
+            if (null != bos) {
                 bos.close();
             }
-            if(null != bis){
+            if (null != bis) {
                 bis.close();
             }
         }
     }
+
+
 }
