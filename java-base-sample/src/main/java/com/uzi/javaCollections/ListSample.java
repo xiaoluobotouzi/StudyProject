@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @ClassName: ListSample
  * @Description: TODO
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/16 22:17
  * ...
  */

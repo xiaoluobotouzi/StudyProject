@@ -3,7 +3,7 @@ package com.uzi.javaCommonClass;
 /**
  * @ClassName: StringSample
  * @Description: String类 示例
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/10 21:14
  * ...
  */
@@ -15,7 +15,7 @@ public class StringSample {
 
     }
 
-    public static void StringBufferUzi(){
+    public static void StringBufferUzi() {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("Hello，");
         stringBuffer.append("World");

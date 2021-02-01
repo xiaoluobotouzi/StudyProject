@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * @ClassName: RegexpSample
  * @Description: java 正则表达式
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/15 22:08
  * ...
  */

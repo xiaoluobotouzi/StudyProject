@@ -3,7 +3,7 @@ package com.uzi.javaPolymorphic;
 /**
  * @ClassName: Student
  * @Description: TODO
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/8 16:01
  * ...
  */

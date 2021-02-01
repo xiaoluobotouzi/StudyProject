@@ -6,7 +6,7 @@ import java.util.TreeSet;
 /**
  * @ClassName: ComparatorSortSample
  * @Description: 比较器排序示例
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/29 23:39
  * ...
  */

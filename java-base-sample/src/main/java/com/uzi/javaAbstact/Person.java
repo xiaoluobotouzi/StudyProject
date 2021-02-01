@@ -3,7 +3,7 @@ package com.uzi.javaAbstact;
 /**
  * @ClassName: Person
  * @Description: TODO
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/8 17:24
  * ...
  */

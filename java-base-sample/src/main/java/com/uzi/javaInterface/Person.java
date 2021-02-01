@@ -3,7 +3,7 @@ package com.uzi.javaInterface;
 /**
  * @ClassName: Person
  * @Description: TODO
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/8 23:09
  * ...
  */
