@@ -17,6 +17,6 @@ public class InputStreamSample {
 
     public static void ByteArrayInputStream(){
 
-        InputStream
+//        InputStream
     }
 }

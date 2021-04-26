@@ -2,7 +2,7 @@ package com.uzi.jvm;
 
 /**
  * @ClassName: JvmSample
- * @Description: TODO
+ * @Description: 类加载
  * @Author: uziJames
  * @Date 2020/7/8 22:18
  * ...
