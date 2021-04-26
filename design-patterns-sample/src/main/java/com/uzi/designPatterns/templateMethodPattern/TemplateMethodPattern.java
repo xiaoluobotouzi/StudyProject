@@ -3,7 +3,7 @@ package com.uzi.designPatterns.templateMethodPattern;
 /**
  * @ClassName: TemplateMethodPattern
  * @Description: 模板方法模式  -demo
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/6/4 23:00
  * ...
  */

@@ -3,7 +3,7 @@ package com.uzi.javaPolymorphic;
 /**
  * @ClassName: TestPoly
  * @Description: java 多态示例
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/8 15:16
  * ...
  */

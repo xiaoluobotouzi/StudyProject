@@ -3,7 +3,7 @@ package com.uzi.designPatterns.bridgePattern;
 /**
  * @ClassName: BridgePattern
  * @Description: 桥接模式 -demo
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/6/1 21:55
  * ...
  */
@@ -21,21 +21,21 @@ public class BridgePattern {
 }
 
 // 抽象角色
-abstract class Abstraction{
+abstract class Abstraction {
 
     Implementor implementor;
 
-    public Abstraction(Implementor implementor){
+    public Abstraction(Implementor implementor) {
         this.implementor = implementor;
     }
 
-    public void operation(){
+    public void operation() {
         this.implementor.operationImpl();
     }
 }
 
 // 修正抽象角色
-class RefinedAbstraction extends Abstraction{
+class RefinedAbstraction extends Abstraction {
 
     public RefinedAbstraction(Implementor implementor) {
         super(implementor);
@@ -49,12 +49,12 @@ class RefinedAbstraction extends Abstraction{
 }
 
 // 实现角色
-interface Implementor{
+interface Implementor {
     void operationImpl();
 }
 
 // 具体实现角色
-class ConcreteImplementorA implements Implementor{
+class ConcreteImplementorA implements Implementor {
 
     @Override
     public void operationImpl() {

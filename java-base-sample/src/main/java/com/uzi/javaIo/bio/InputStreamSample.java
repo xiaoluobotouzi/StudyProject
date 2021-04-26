@@ -1,11 +1,9 @@
 package com.uzi.javaIo.bio;
 
-import java.io.InputStream;
-
 /**
  * @ClassName: InputStreamSample
  * @Description: input stream 示例
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/9/1 22:36
  * ...
  */
@@ -15,8 +13,7 @@ public class InputStreamSample {
 
     }
 
-    public static void ByteArrayInputStream(){
+    public static void ByteArrayInputStream() {
 
-//        InputStream
     }
 }

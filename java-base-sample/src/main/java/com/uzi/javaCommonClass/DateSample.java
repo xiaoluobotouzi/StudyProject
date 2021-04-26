@@ -1,12 +1,14 @@
 package com.uzi.javaCommonClass;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * @ClassName: DateSample
  * @Description: 时间类 示例
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/14 17:17
  * ...
  */
@@ -40,38 +42,37 @@ public class DateSample {
         System.out.println("DAY_OF_WEEK_IN_MONTH: " + calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH));
         System.out.println("AM_PM: " + calendar.get(Calendar.AM_PM));
         System.out.println("MILLISECOND: " + calendar.get(Calendar.MILLISECOND));
-        System.out.println("ZONE_OFFSET: "+ (calendar.get(Calendar.ZONE_OFFSET)/(60*60*1000)));
-        System.out.println("DST_OFFSET: "+ (calendar.get(Calendar.DST_OFFSET)/(60*60*1000)));
+        System.out.println("ZONE_OFFSET: " + (calendar.get(Calendar.ZONE_OFFSET) / (60 * 60 * 1000)));
+        System.out.println("DST_OFFSET: " + (calendar.get(Calendar.DST_OFFSET) / (60 * 60 * 1000)));
 
     }
 
     public static void calendarDisplay() {
-        Calendar c = new GregorianCalendar(2020,03,15);
-        Calendar ca = new GregorianCalendar(c.get(Calendar.YEAR),c.get(Calendar.MONTH),1);
-        Calendar temp = new GregorianCalendar(ca.get(Calendar.YEAR),ca.get(Calendar.MONTH)+1,1);
-        System.out.println("\t\t"+ca.get(Calendar.YEAR)+"年\t"+(ca.get(Calendar.MONTH)+1)+"月");
+        Calendar c = new GregorianCalendar(2020, 03, 15);
+        Calendar ca = new GregorianCalendar(c.get(Calendar.YEAR), c.get(Calendar.MONTH), 1);
+        Calendar temp = new GregorianCalendar(ca.get(Calendar.YEAR), ca.get(Calendar.MONTH) + 1, 1);
+        System.out.println("\t\t" + ca.get(Calendar.YEAR) + "年\t" + (ca.get(Calendar.MONTH) + 1) + "月");
         System.out.println();
         System.out.println("日\t一\t二\t三\t四\t五\t六");
 
-        for(int i =1; i<ca.get(Calendar.DAY_OF_WEEK);i++)
+        for (int i = 1; i < ca.get(Calendar.DAY_OF_WEEK); i++)
             System.out.print("\t");
-        do{
-            if(ca.get(Calendar.DAY_OF_WEEK)==7)
-                System.out.println(ca.get(Calendar.DAY_OF_MONTH)+"\t");
+        do {
+            if (ca.get(Calendar.DAY_OF_WEEK) == 7)
+                System.out.println(ca.get(Calendar.DAY_OF_MONTH) + "\t");
             else
-                System.out.print(ca.get(Calendar.DAY_OF_MONTH)+"\t");
+                System.out.print(ca.get(Calendar.DAY_OF_MONTH) + "\t");
 
             ca.add(Calendar.DAY_OF_MONTH, 1);
-        }while(ca.get(Calendar.MONTH) != temp.get(Calendar.MONTH));
+        } while (ca.get(Calendar.MONTH) != temp.get(Calendar.MONTH));
 
     }
-
 
 
     /**
      * data类
      */
-    public static void dataUzi(){
+    public static void dataUzi() {
         //使用Date类需要 import java.util.Date; 导入这个包才可以使用
         //通过new关键创建date对象
         Date date = new Date();
@@ -98,7 +99,7 @@ public class DateSample {
 
         //获取当前几号
         int date1 = date.getDate();
-        System.out.print(date1 + "号" );
+        System.out.print(date1 + "号");
 
         //获取当前星期几
         int day = date.getDay();
@@ -118,7 +119,7 @@ public class DateSample {
     }
 
     /**
-     *  SimpleDateFormat 时间格式转换
+     * SimpleDateFormat 时间格式转换
      */
     public static void simpleDateFormatUzi() {
         // 通过new关键创建date对象

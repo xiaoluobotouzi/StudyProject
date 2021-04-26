@@ -3,7 +3,7 @@ package com.uzi.javaExtends;
 /**
  * @ClassName: TestExtends
  * @Description: java 继承
- * @Author: uziJamesi
+ * @Author: uziJames
  * @Date 2020/3/3 23:06
  * ...
  */
