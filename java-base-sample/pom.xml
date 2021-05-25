@@ -11,12 +11,34 @@
 
     <artifactId>java-base-sample</artifactId>
 
+    <properties>
+        <fastjson.version>1.2.70</fastjson.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
             <version>0.9</version>
         </dependency>
+
+        <!-- fastJson 依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>fastjson</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <!-- fastJson 依赖 -->
     </dependencies>
 
 </project>
